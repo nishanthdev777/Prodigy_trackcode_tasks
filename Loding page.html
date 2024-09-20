@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title icon>landing page</title>
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/airport-17/256/1-1024.png" type="image/icon type">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Fixed Navigation Menu */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, gray, rgb(137, 216, 216));
+            padding: 10px 0;
+            z-index: 1000;
+            transition: background-color 0.1s ease;
+        }
+
+        /* Navbar Links */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #282425;
+            text-decoration: none;
+           
+            border-radius: 5px;
+            font-size: 18px;
+            transition: color, blue;
+        }
+
+        /* Hover Effect */
+        nav ul li a:hover  {
+            border: #b39595;
+            padding:20px,30px ;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: 18px;
+            
+        }
+
+        
+
+        .scrolled {
+            background-color: #222;
+        }
+
+        .content-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+           
+           
+          
+            text-align: center;
+            padding: 10px;
+            color:rgb(113, 186, 176);
+        }
+
+        #home {
+            
+            background-color: #1abc9c;
+            background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(https://i.pinimg.com/originals/ba/0e/b8/ba0eb82dbe74fb21925083c2ea7475b4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+        }
+
+        #home h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            background-color: #3498db;
+            background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(https://www.wallpapertip.com/wmimgs/160-1606283_web-developer-wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #services {
+            background-color: #9b59b6;
+            background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(https://www.brainstormindia.com/images/resources/web.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #contact {
+            background-color: #e74c3c;
+            background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.6 0)),url(https://png.pngtree.com/background/20230625/original/pngtree-conceptual-design-for-3d-application-development-and-ui-ux-picture-image_4051754.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        .button {
+            background: #fff;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #ddd;
+        }
+
+        .button .icon {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home"class="active">Home</a></li>
+            <li><a href="#about"class="active">About</a></li>
+            <li><a href="#services"class="active">Services</a></li>
+            <li><a href="#contact"class="active">Contact</a></li>
+        </ul>
+        
+    </nav>
+    
+
+    <!-- Home Section -->
+    <div id="home" class="content-section">
+        <h1 style="margin-top: 40px;">BEST WEBPAGE DEVELOPMENT </h1>
+        
+
+        
+    </div>
+
+    
+
+    <!-- About Section -->
+    <div id="about" class="content-section">
+        <!-- Content for About section -->
+        <h1 style="margin-top: 300px;">Welcome to about section </h1>
+
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="content-section">
+        <!-- Content for Services section -->
+        <h1 style="margin-top: 500px;">Welcome to service section </h1>
+
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="content-section">
+        <!-- Content for Contact section -->
+        <h1 style="margin-top: 300px;">Welcome content section</h1>
+
+    </div>
+
+    <script>
+        // Change navbar style on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
